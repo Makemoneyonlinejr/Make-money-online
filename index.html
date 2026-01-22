@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Make Money Online 2026</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1b0a3d;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 360px;
+      height: 720px;
+      background: #2b0b6f;
+      position: relative;
+      overflow: hidden;
+      padding: 30px 20px;
+      box-sizing: border-box;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: #5a2bd6;
+      opacity: 0.9;
+    }
+
+    .c1 { width: 260px; height: 260px; top: -40px; left: -40px; }
+    .c2 { width: 180px; height: 180px; top: 220px; right: -60px; }
+    .c3 { width: 100px; height: 100px; bottom: 160px; left: 20px; }
+    .c4 { width: 120px; height: 120px; bottom: -40px; right: 40px; }
+
+    h1 {
+      text-align: center;
+      margin-top: 120px;
+      font-size: 26px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      margin-top: 15px;
+      border-radius: 25px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      background: black;
+      color: white;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 20px;
+      border: none;
+      margin-top: 10px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .or {
+      text-align: center;
+      margin: 15px 0;
+      opacity: 0.6;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      font-size: 12px;
+      text-align: center;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+  <div class="circle c3"></div>
+  <div class="circle c4"></div>
+
+  <h1>Make Money Online 2026</h1>
+  <p>We are creating your account</p>
+
+  <button class="btn">Continue with Email</button>
+
+  <div class="or">OR</div>
+
+  <button class="btn">Continue with Google</button>
+
+  <div class="or">OR</div>
+
+  <input type="tel" id="phone" placeholder="Enter your phone number">
+  <button class="btn" onclick="loginWithPhone()">Continue with Phone</button>
+
+  <div class="footer">
+    By continuing, you accept our Terms & Privacy Policy
+  </div>
+</div>
+
+<script>
+  function loginWithPhone() {
+    const phone = document.getElementById("phone").value;
+    if (!phone) {
+      alert("Please enter your phone number");
+      return;
+    }
+    alert("Phone login requested for: " + phone);
+  }
+</script>
+
+</body>
+</html>

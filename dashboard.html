@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Tâches</title>
+<style>
+body{margin:0;background:#1c1c1c;color:white;font-family:Arial}
+.header{padding:20px;display:flex;justify-content:space-between}
+.balance{background:#5a2bd6;padding:8px 14px;border-radius:20px}
+.task{background:#2a2a2a;margin:15px;padding:15px;border-radius:15px}
+button{margin-top:10px;padding:10px 15px;border-radius:10px;border:none;background:#5a2bd6;color:white;cursor:pointer}
+iframe{width:100%;height:200px;border-radius:10px}
+</style>
+</head>
+<body>
+<div id="app" style="display:none;">
+  <div class="header">
+    <h2>Tâches</h2>
+    <div class="balance">$<span id="bal">0.20</span></div>
+  </div>
+
+  <div class="task">
+    <h4>🎯 Regarde la vidéo & gagne $0.05</h4>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    <button onclick="gain(0.05,this)">Marquer comme vu</button>
+  </div>
+
+  <div class="task">
+    <h4>🎯 Regarde la vidéo & gagne $0.10</h4>
+    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" allowfullscreen></iframe>
+    <button onclick="gain(0.10,this)">Marquer comme vu</button>
+  </div>
+
+  <div class="task">
+    <h4>🎯 Regarde la vidéo & gagne $0.07</h4>
+    <iframe src="https://www.youtube.com/embed/l482T0yNkeo" allowfullscreen></iframe>
+    <button onclick="gain(0.07,this)">Marquer comme vu</button>
+  </div>
+</div>
+
+<div id="loginMsg" style="text-align:center;margin-top:100px;">
+  <h2>🔒 Connecte-toi pour voir les tâches</h2>
+</div>
+
+<script>
+const isLoggedIn=localStorage.getItem("userConnected");
+if(isLoggedIn==="true"){
+  document.getElementById("app").style.display="block";
+  document.getElementById("loginMsg").style.display="none";
+}
+let bal=parseFloat(localStorage.getItem("balance")||"0.20");
+document.getElementById("bal").innerText=bal.toFixed(2);
+
+function gain(amount,btn){
+  bal+=amount;
+  localStorage.setItem("balance",bal);
+  document.getElementById("bal").innerText=bal.toFixed(2);
+  btn.disabled=true;
+  btn.innerText="✔ Gain ajouté";
+}
+</script>
+</body>
+</html>
