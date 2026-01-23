@@ -53,3 +53,15 @@ button {
   color: white;
   cursor: pointer;
 }
+.right-text {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  font-size: 24px;
+  max-width: 320px;
+  line-height: 1.4;
+  color: #ffffff;
+  text-align: right;
+}
