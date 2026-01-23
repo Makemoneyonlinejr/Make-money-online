@@ -7,3 +7,10 @@ $_SESSION['user']=$u['id']; header("Location: dashboard.php");
 }}
 ?>
 <form method="post"><input name="phone"><input name="password" type="password"><button>Login</button></form>
+<button class="btn">
+  <img src="mail.png" class="icon"> Continuer avec Email
+</button>
+
+<button class="btn">
+  <img src="google.png" class="icon"> Continuer avec Google
+</button>
